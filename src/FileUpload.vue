@@ -291,7 +291,8 @@ export default {
       this.watchActive(active)
     },
 
-    dropActive() {
+    dropActive(dropActive) {
+      this.$emit('drop-active', dropActive);
       if (this.$parent) {
         this.$parent.$forceUpdate()
       }
